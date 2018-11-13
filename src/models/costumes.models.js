@@ -189,6 +189,7 @@ function deleteCostume(costumeId) {
 function deleteTag(tagId) {
     let affectedCostume = ''
     let delTag = ''
+    
     //find tag in Costumes, remove tag from that costume before deleting from Tags
     for(costume of costumes) {
         if(costume.tags.includes(tagId)){
