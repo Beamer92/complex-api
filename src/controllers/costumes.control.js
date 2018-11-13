@@ -80,25 +80,35 @@ function createTag(req,res,next) {
         color: req.body.color
     }
     const result = model.createTag(req.cos.id, newTag)
-    console.log(result)
+
+    if (result.errors) {
+        return next({ status: 400, message: `There was an error creating Tag`, errors: result.errors })
+      }
     return res.status(200).send(result)
 }
 
-// function updateCostume(req,res,next) {
+function updateCostume(req,res,next) {
+    const result = model.updateCostume(req.cos.id, req.body)
+    return res.status(202).send(result)
+}
 
-// }
+function updateTag(req,res,next) {
+    const result = model.updateTag(req.tagid, req.body)
+    return res.status(202).send(result)
+}
 
-// function updateTag(req,res,next) {
+ function deleteCostume(req,res,next) {
+    const result = model.deleteCostume(req.cos.id)
+    return res.status(202).send(result)
+ }
 
-// }
-
-// function deleteCostume(req,res,next) {
-
-// }
-
-// function deleteTag(req,res,next) {
-
-// }
+function deleteTag(req,res,next) {
+    const result = model.deleteTag(req.tagid)
+    return res.status(202).send(result)
+}
 
 
-module.exports = {getCostumes, getTags, checkCos, checkCosDup, checkTag, getCostume, getCTags, createCostume, createTag}
+module.exports = {getCostumes, getTags, checkCos, 
+    checkCosDup, checkTag, getCostume,
+     getCTags, createCostume, createTag,
+    updateCostume, updateTag, deleteCostume, deleteTag}    

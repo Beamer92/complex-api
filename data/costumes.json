@@ -2,7 +2,7 @@
     {
         "id": "7997efbf-2c47-4aac-a54d-bf3cdf0a282a",
         "name": "Unicorn",
-        "price": 399.95,
+        "price": "399.95",
         "description": "Fuzzy unicorn costume with horned hood and tail",
         "tags": [
             "f8f2387c-8efb-4460-a593-aa52be6b35e8"
@@ -11,7 +11,7 @@
     {
         "id": "43e2942a-49ae-4830-bc8e-853101899dca",
         "name": "Pirate",
-        "price": 149.99,
+        "price": "149.99",
         "description": "Complete with dreads, this pirate costume will give anyone a longing for the high seas",
         "tags": [
             "4807592d-cb5e-4cc8-bbe2-483227764bab",
@@ -30,9 +30,13 @@
     },
     {
         "id": "763d3187-6ca7-485f-8d28-7c2c183f4672",
-        "name": "Witch",
-        "price": "120.00",
+        "name": "Witches",
+        "price": 130.99,
         "description": "Magical hag",
-        "tags": []
+        "tags": [
+            "f827298d-6ff6-4bf0-b3cf-def02eb8313d",
+            "8dd481be-0c7a-4a78-8181-f23a152470d2",
+            "8bb151f2-33e6-4e0f-b940-9f189c436226"
+        ]
     }
 ]

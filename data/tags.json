@@ -1,8 +1,8 @@
 [
   {
-    "id": "f8f2387c-8efb-4460-a593-aa52be6b35e8",
+    "id": "8bb151f2-33e6-4e0f-b940-9f189c436226",
     "name": "Animal",
-    "color": "#483D8B"
+    "color": "#404102"
   },
   {
     "id": "4807592d-cb5e-4cc8-bbe2-483227764bab",
@@ -23,5 +23,10 @@
     "id": "ea77ce8b-5d25-4478-97ab-6d92a6251b8c",
     "name": "Humanoid",
     "color": "#E0FFFF"
+  },
+  {
+    "id": "f827298d-6ff6-4bf0-b3cf-def02eb8313d",
+    "name": "ugly",
+    "color": "#303030"
   }
 ]
