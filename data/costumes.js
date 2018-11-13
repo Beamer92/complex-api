@@ -1,5 +1,3 @@
-const uuid = require('uuid/v4')
-
 const costumes = [
     {
         id: '7997efbf-2c47-4aac-a54d-bf3cdf0a282a',

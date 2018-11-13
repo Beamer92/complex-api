@@ -1,5 +1,3 @@
-const uuid = require('uuid/v4')
-
 const tags = [ {
         id: "f8f2387c-8efb-4460-a593-aa52be6b35e8",
     name: 'Animal',
