@@ -51,7 +51,6 @@ function checkTag (tagId) {
     return response
 }   
 
-
 function getCostumes(limit) {
      return limit ? costumes.slice(0, limit) : costumes
 }
@@ -78,13 +77,22 @@ function getCTags(costumeId) {
 
 function createCostume(obj) {
     costumes.push(obj)
-    const content = JSON.stringify(costumes);
-    fs.writeFileSync('./data/costumes.json', content, 'utf8', 'a')
+    const content = JSON.stringify(costumes, null, 4);
+    fs.writeFileSync('./data/costumes.json', content, 'utf-8', 'a')
+    return (obj)
 }
 
-// function createTag(costumeId, obj) {
-    
-// }
+function createTag(costumeId, obj) {
+    tags.push(obj)
+    const content = JSON.stringify(tags, null, 2)
+    fs.writeFileSync('./data/tags.json', content, 'utf-8', 'a')
+
+    let ind = costumes.findIndex(obj => obj.id === costumeId)
+    costumes[3].tags.push(obj.id)
+    const costContent = JSON.stringify(costumes, null, 4);
+    fs.writeFileSync('./data/costumes.json', costContent, 'utf-8', 'a')
+    return (`Created ${obj.name} tag and appended it to the ${costumes[3].name} costume`)
+}
 
 
-module.exports = {getCostumes, getTags, checkCos, checkCosDup, checkTag, getCTags, createCostume}
+module.exports = {getCostumes, getTags, checkCos, checkCosDup, checkTag, getCTags, createCostume, createTag}

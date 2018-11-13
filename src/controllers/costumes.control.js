@@ -70,17 +70,19 @@ function createCostume(req,res,next) {
         tags: []
     }
     const result = model.createCostume(newCost)
-    return res.status(200).send(result)
+    return res.status(201).send(result)
 }
 
-// function createTag(req,res,next) {
-//     let newTag = {
-//         name: req.body.tagName,
-//         color: req.body.color
-//     }
-//     const result = model.getCostume(req.id, newTag)
-//     return res.status(200).send(result)
-// }
+function createTag(req,res,next) {
+    let newTag = {
+        id: uuid(),
+        name: req.body.tagName,
+        color: req.body.color
+    }
+    const result = model.createTag(req.cos.id, newTag)
+    console.log(result)
+    return res.status(200).send(result)
+}
 
 // function updateCostume(req,res,next) {
 
@@ -99,4 +101,4 @@ function createCostume(req,res,next) {
 // }
 
 
-module.exports = {getCostumes, getTags, checkCos, checkCosDup, checkTag, getCostume, getCTags, createCostume}
+module.exports = {getCostumes, getTags, checkCos, checkCosDup, checkTag, getCostume, getCTags, createCostume, createTag}
