@@ -58,6 +58,7 @@ function getTags() {
     return tags
 }
 
+// removed unused code
 // function getCostume(costumeId) {
 //     const res = costumes.find(obj => obj.id === costumeId)
 //     return res
@@ -190,6 +191,7 @@ function deleteTag(tagId) {
     let affectedCostume = ''
     let delTag = ''
     
+    // use `.find()` instead of a for loop
     //find tag in Costumes, remove tag from that costume before deleting from Tags
     for(costume of costumes) {
         if(costume.tags.includes(tagId)){
