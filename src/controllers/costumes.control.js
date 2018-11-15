@@ -52,6 +52,7 @@ function checkTag(req,res,next) {
 }
 
 function getCostume(req,res,next) {
+    // remove unused code
     // const result = model.getCostume(req.id)
     return res.status(200).send(req.cos)
 }
@@ -75,7 +76,7 @@ function createCostume(req,res,next) {
 
 function createTag(req,res,next) {
     let newTag = {
-        id: uuid(),
+        id: uuid(), // uuid should be generated in the model
         name: req.body.tagName,
         color: req.body.color
     }
